@@ -1,0 +1,31 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+.admin-main {
+  flex: 1;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 20px 25px;
+  overflow-y: auto;
+}
+
+/* Khi sidebar collapse */
+.sidebar.collapsed + .admin-main {
+  margin-left: 80px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .admin-main {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,129 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Nền có gradient xanh-cam + blur mềm */
+.login-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(0,123,255,0.8), rgba(255,153,51,0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hiệu ứng background floating light */
+.login-container::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+  filter: blur(120px);
+}
+
+.login-container::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,165,0,0.3) 0%, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  filter: blur(120px);
+}
+
+/* Hộp đăng nhập */
+.login-box {
+  position: relative;
+  z-index: 1;
+  width: 400px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.login-logo {
+  width: 100px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.login-title {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-input {
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255,255,255,0.8);
+  transition: 0.2s ease;
+  font-size: 15px;
+}
+
+.login-input:focus {
+  background: rgba(255,255,255,1);
+  box-shadow: 0 0 8px rgba(0,123,255,0.6);
+}
+
+.login-button {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #007bff, #ff9900);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+
+.login-container {
+  animation: gradientMove 8s ease infinite alternate;
+}
+
+@keyframes gradientMove {
+  from {
+    background-position: left top;
+  }
+  to {
+    background-position: right bottom;
+  }
+}

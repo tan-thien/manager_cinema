@@ -1,0 +1,29 @@
+# Node
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build / Output
+build/
+dist/
+
+# Flutter
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/ios/Pods/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+
+# VSCode
+.vscode/
+
+# Temp / OS
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+*.zip
+*.rar
+$RECYCLE.BIN/
